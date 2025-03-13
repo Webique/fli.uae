@@ -1,234 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>F L | Bakery & Cafe</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Cake Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header class="main-header">
-  <div class="container">
-    <div class="logo-section">
-      <span class="logo">Fli</span>
-    </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#hours">Opening Hours</a></li>
-        <li><a href="#location">Location</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a href="index1.html" class="language-btn">AR</a>
-      <div class="hamburger">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo.png" alt="Cake Shop Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="content.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </div>
-</header>
 
-<section class="hero" style="background: url('assets/hero.png') center center / cover no-repeat;">
-    <div class="hero-overlay"></div>
-  </section>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container text-center hero-content">
+            <h1 class="hero-title">Exquisite Cakes for Every Occasion</h1>
+            <p class="hero-subtitle">Indulge in the finest handcrafted cakes, made with love and perfection.</p>
+            <a href="menu.html" class="btn custom-btn hero-btn">View Menu</a>
+        </div>
+    </header>
 
-<section id="about" class="about-us">
-  <div class="container">
-      <div class="about-content">
-          <div class="about-text">
-              <h2 class="section-title">Who We Are</h2>
-              <p class="section-description">Welcome to F L | Bakery & Cafe, your go-to spot for delightful baked goods and specialty coffee.</p>
-          </div>
-          <div class="about-image">
-              <img src="assets/aboutus.jpg" alt="Bakery Image">
-          </div>
-      </div>
-  </div>
-</section>
+    <!-- Our Story Section -->
+    <section class="our-story">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Image Section -->
+                <div class="col-lg-6">
+                    <div class="story-image">
+                        <img src="story.jpg" alt="Our Story Image">
+                    </div>
+                </div>
+                <!-- Text Section -->
+                <div class="col-lg-6">
+                    <div class="story-text">
+                        <h2 class="story-title">Our Story</h2>
+                        <p class="story-description">
+                            From a small family bakery to a luxurious cake boutique, our journey has been one of passion and dedication. 
+                            We believe that every cake tells a story, and we pour our heart into each creation, ensuring perfection in every bite.
+                        </p>
+                        <p class="story-description">
+                            Using only the finest ingredients and time-honored techniques, we craft desserts that are as beautiful as they are delicious. 
+                            Join us in celebrating life's sweetest moments with our exquisite cakes.
+                        </p>
+                        <a href="#" class="btn btn-outline-dark story-btn">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="section-divider"></div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Brand & About -->
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="#" class="footer-logo">
+                        <img src="assets/logo.png" alt="Cake Shop Logo">
+                    </a>
+                    <p>Bringing you the finest handcrafted cakes made with passion and perfection.</p>
+                </div>
 
-<section id="menu" class="menu-section">
-  <div class="menu-background"></div>
-  <div class="container">
-      <h2 class="section-title">Our Menu</h2>
-      <p class="section-description">Explore our delicious range of fresh pastries, cakes, and beverages.</p>
-      <div class="menu-preview">
-          <div class="menu-item">
-              <img src="assets/1.jpeg" alt="Bakery Item">
-              <h3>Signature Cake</h3>
-          </div>
-          <div class="menu-item">
-              <img src="assets/2.jpeg" alt="Bakery Item">
-              <h3>Chocolate Croissant</h3>
-          </div>
-          <div class="menu-item">
-              <img src="assets/3.jpeg" alt="Bakery Item">
-              <h3>Freshly Brewed Coffee</h3>
-          </div>
-      </div>
-      <a href="menu.html" class="menu-button">View Full Menu</a>
-  </div>
-</section>
+                <!-- Quick Links -->
+                <div class="col-lg-4 col-md-6 footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="content.html#about">Our Story</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
 
-<div class="section-divider"></div>
+                <!-- Contact & Socials -->
+                <div class="col-lg-4 col-md-12 footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Cake Street, London, UK</p>
+                    <p><i class="fas fa-phone"></i> +44 123 456 789</p>
+                    <p><i class="fas fa-envelope"></i> info@luxurycakeshop.com</p>
 
-<section id="hours" class="opening-hours">
-  <div class="container">
-      <h2 class="section-title">Opening Hours</h2>
-      <p class="section-description">We are open daily to serve you!</p>
-      <div class="hours-card">
-          <div class="icon">
-              <i class="fas fa-clock"></i>
-          </div>
-          <div class="hours-info">
-              <span class="day-name">Every Day</span>
-              <span class="day-time">5:00 PM - 3:00 AM</span>
-          </div>
-      </div>
-  </div>
-</section>
-<div class="section-divider"></div>
+                    <!-- Social Icons -->
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
 
-<section id="delivery" class="delivery-section">
-  <div class="container">
-    <h2 class="section-title">Delivery Options</h2>
-    <div class="delivery-options">
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Luxury Cake Shop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-      <!-- Talabat -->
-      <a href="https://www.talabat.com/uae/fli-bakery-and-cafe" target="_blank" class="delivery-option">
-        <img src="assets/talabat.png" alt="Talabat Logo">
-        <span>Talabat</span>
-      </a>
-
-      <!-- Deliveroo -->
-      <a href="https://deliveroo.ae/menu/Sharjah/al-zahiya-north/fli-cafe" target="_blank" class="delivery-option">
-        <img src="assets/deliveroo.png" alt="Deliveroo Logo">
-        <span>Deliveroo</span>
-      </a>
-
-      <!-- Delivery to All Emirates -->
-      <a href="https://api.whatsapp.com/message/2PV5YFORG562G1?autoload=1&app_absent=0" target="_blank" class="delivery-option">
-        <img src="assets/logo.png" alt="Delivery Logo">
-        <span>All Emirates</span>
-      </a>
-      
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<section id="pickup" class="pickup-section">
-  <div class="container">
-    <h2 class="section-title">Pickup Options</h2>
-    <div class="pickup-options">
-
-      <!-- Drivu Kshisha -->
-      <a href="https://www.drivu.co/shops/country/united-arab-emirates/city/sharjah/shop/FLI_r0qwB" target="_blank" class="pickup-option">
-        <span>Drivu Kshisha</span>
-      </a>
-
-      <!-- Drivu Aljada -->
-      <a href="https://drivu.co/DriveThru/Fli_r0qwB/AlJada" target="_blank" class="pickup-option">
-        <span>Drivu Aljada</span>
-      </a>
-
-      <!-- BEANZ App Store -->
-      <a href="https://apps.apple.com/ae/app/beanz-%D8%A8%D9%8A%D9%86%D8%B2/id1532652635" target="_blank" class="pickup-option">
-        <span>BEANZ - بينز (App Store)</span>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-<div class="section-divider"></div>
-
-<section id="location" class="location-section">
-  <div class="container">
-      <h2 class="section-title">Our Locations</h2>
-      <div class="location-cards">
-          <!-- Shop Location -->
-          <div class="location-card">
-              <h3>Shop Location</h3>
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.538127867089!2d55.4813085!3d25.319717500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f2704a0643f%3A0x1e5a9be918ae9704!2sFLI%20Bakery%26Cafe!5e0!3m2!1sen!2sae!4v1741675018655!5m2!1sen!2sae"
-                width="100%" 
-                height="250" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-          </div>
-
-          <!-- Kshisha Pop Location -->
-          <div class="location-card">
-              <h3>Kshisha Pop Location</h3>
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3605.841782689312!2d55.58980847538656!3d25.343089677617428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDIwJzM1LjEiTiA1NcKwMzUnMzIuNiJF!5e0!3m2!1sen!2sae!4v1741675042596!5m2!1sen!2sae"
-                width="100%" 
-                height="250" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-          </div>
-
-          <!-- Aljada Garden Location -->
-          <div class="location-card">
-              <h3>Aljada Garden Location</h3>
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.5397002985433!2d55.4814061!3d25.319664700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f0052d698c9%3A0xae78bfea34fa602c!2sHidden%20Garden%20by%20FLI!5e0!3m2!1sen!2suk!4v1741675059518!5m2!1sen!2suk"
-                width="100%" 
-                height="250" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-          </div>
-      </div>
-  </div>
-</section>
-
-
-
-<footer id="contact" class="contact-footer">
-  <div class="container">
-      <h2 class="footer-title">Stay Connected</h2>
-      <p class="footer-description">Follow us for updates and special offers.</p>
-      <div class="social-icons">
-          <a href="https://instagram.com/fli.uae" target="_blank" class="social-link instagram">
-              <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://wa.me/971505666779" target="_blank" class="social-link whatsapp">
-              <i class="fab fa-whatsapp"></i>
-          </a>
-          <a href="mailto:fli.uae@hotmail.com" target="_blank" class="social-link email">
-              <i class="fas fa-envelope"></i>
-          </a>
-          <a href="tel:+97165661455" target="_blank" class="social-link call">
-              <i class="fas fa-phone"></i>
-          </a>
-      </div>
-      <div class="footer-bottom">
-          <p>&copy; 2024 F L | Bakery & Cafe. All rights reserved.</p>
-      </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
