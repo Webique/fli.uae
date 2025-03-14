@@ -14,26 +14,29 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-
-    // Add background color to navbar on scroll
-    const navbar = document.querySelector(".navbar");
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 50) {
-            navbar.classList.add("bg-light", "shadow-sm");
-        } else {
-            navbar.classList.remove("bg-light", "shadow-sm");
-        }
-    });
+    
 });
 
-// Function to Open the Modal
-function openModal(title, image, description, price) {
-    document.getElementById('modalTitle').innerText = title;
-    document.getElementById('modalImage').src = image;
-    document.getElementById('modalDescription').innerText = description;
-    document.getElementById('modalPrice').innerText = price;
-    document.getElementById('menuModal').style.display = 'flex';
+function openModal(title, imageName, description, price) {
+    const modalImage = document.getElementById("modalImage");
+    
+    // Ensure the correct path for images
+    modalImage.src = `assets/${imageName}`;  // ✅ Ensure image loads correctly
+    modalImage.alt = title; // ✅ Add proper alt text
+
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDescription").innerText = description;
+    document.getElementById("modalPrice").innerText = price;
+
+    document.getElementById("menuModal").style.display = "flex";
 }
+
+/* Close Modal */
+function closeModal() {
+    document.getElementById("menuModal").style.display = "none";
+}
+
+
 
 // Function to Close the Modal
 function closeModal() {

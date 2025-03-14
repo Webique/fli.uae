@@ -1,31 +1,36 @@
-/* styles.css */
-
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    padding-top: 80px; /* Pushes content down so it doesn’t get hidden under the navbar */
+    background-color: #8B5E3C;
+    color: #5C4033;
 
 }
 
-/* Navbar Styles */
-.navbar {
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Dancing Script', cursive;
+    color: #5C4033;
+}
+/* Custom Navbar */
+.custom-navbar {
+    background-color: #c9a68b !important; /* Deep bakery espresso brown */
     padding: 15px 0;
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
 }
+
+
 
 .navbar-brand img.logo {
-    height: 60px;
+    height: 80px;
 }
 
 .navbar-nav .nav-link {
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
     margin-left: 20px;
-    transition: color 0.3s;
+    transition: color 0.3s ease-in-out;
     position: relative;
 }
 
@@ -34,7 +39,7 @@ body {
     display: block;
     width: 0;
     height: 2px;
-    background: #d16b86;
+    background: #C56E33;
     transition: width 0.3s;
     position: absolute;
     left: 50%;
@@ -47,21 +52,22 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #d16b86;
+    color: #C56E33;
 }
 
 /* Order Now Button */
 .btn-primary {
-    background-color: #d16b86;
+    background-color: #E88E8E;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 30px;
-    transition: background 0.3s;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 25px;
+    transition: background 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
-    background-color: #b34e6f;
+    background-color: #C56E33;
 }
 
 /* Responsive Styles */
@@ -73,6 +79,7 @@ body {
     .navbar-nav .nav-item {
         margin: 10px 0;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -81,21 +88,21 @@ body {
     }
 
     .btn-primary {
-        padding: 8px 16px;
-        font-size: 14px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .navbar-brand img.logo {
+        height: 60px;
     }
 }
 
-
-/* ========================== */
-/* Fix Button Background Color */
-/* ========================== */
-
+/* Updated Custom Button */
 .custom-btn {
-    background-color: #de6082 !important; /* Ensures the background color stays */
+    background-color: #E88E8E;
     border: none;
-    padding: 12px 25px;
-    font-size: 1.2rem;
+    padding: 14px 28px;
+    font-size: 1.4rem;
     font-weight: 600;
     color: white !important;
     border-radius: 30px;
@@ -105,84 +112,143 @@ body {
 }
 
 .custom-btn:hover {
-    background-color: #b34e6f !important; /* Slightly darker shade for hover effect */
+    background-color: #C56E33 !important;
+    transform: scale(1.05);
 }
 
 
-/* Hero Section */
+/* Hero Section with Video */
+/* Default Hero Section */
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
-    background: url('assets/background.png') no-repeat center center/cover;
+    height: 100vh; /* Full height on desktops */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;
+    color: #5C4033; /* Rich brown for readability */
+    overflow: hidden;
 }
 
+/* Background Video */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+/* Overlay to Improve Text Visibility */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    background: rgba(0, 0, 0, 0.3); /* Light overlay for better readability */
 }
 
+/* Hero Content */
 .hero-content {
     position: relative;
     z-index: 2;
     max-width: 600px;
 }
 
+/* Hero Title */
 .hero-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    font-family: 'Dancing Script', cursive;
     font-weight: 700;
     margin-bottom: 10px;
+    color: #FAE3C6; /* Light cream color */
     opacity: 0;
     transform: translateY(-20px);
     animation: fadeIn 1.5s ease-in-out forwards;
 }
 
+/* Hero Subtitle */
 .hero-subtitle {
     font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     margin-bottom: 20px;
+    color: #FCE6C9; /* Soft beige */
     opacity: 0;
     transform: translateY(10px);
     animation: fadeIn 1.8s ease-in-out forwards;
 }
 
+/* Stylish Hero Button */
 .hero-btn {
-    padding: 12px 25px;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 30px;
-    transition: background 0.3s ease-in-out;
+    display: inline-block;
+    padding: 14px 35px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #D4A373, #B68257); /* Beautiful caramel gradient */
+    color: white;
+    border-radius: 50px;
+    margin-top: 60px;
+    border: none;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25); /* Elegant shadow for depth */
+    transition: all 0.4s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    max-width: 220px;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Button Hover Animation */
 .hero-btn:hover {
-    background-color: #b34e6f;
+    background: linear-gradient(135deg, #8C5A36, #704A2E); /* Darker chocolate gradient */
+    transform: scale(1.1); /* Slight pop-out effect */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow */
 }
 
-/* Animations */
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Adding a subtle glow effect */
+.hero-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 60%);
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
 }
 
-/* Responsive Adjustments */
+.hero-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Add smooth press effect when clicked */
+.hero-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust Hero Section for Tablets */
 @media (max-width: 768px) {
+    .hero {
+        height: 75vh; /* Reduce height for tablets */
+    }
+
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
     }
 
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .hero-btn {
@@ -191,13 +257,18 @@ body {
     }
 }
 
+/* Adjust Hero Section for Mobile */
 @media (max-width: 480px) {
+    .hero {
+        height: 60vh; /* Reduce height even more for mobile */
+    }
+
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .hero-btn {
@@ -211,6 +282,13 @@ body {
     background-color: #fff;
 }
 
+/* ✅ Title Wrapper (Now Can Be Moved on Mobile) */
+.story-title-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Story Image */
 .story-image img {
     width: 100%;
     border-radius: 10px;
@@ -218,15 +296,15 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.story-image img:hover {
-    transform: scale(1.05);
-}
 
+/* Story Text */
 .story-text {
     padding: 20px;
     text-align: left;
+    font-family: 'Playfair Display', serif;
 }
 
+/* Story Title */
 .story-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -234,6 +312,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Story Description */
 .story-description {
     font-size: 1.2rem;
     font-weight: 400;
@@ -242,6 +321,7 @@ body {
     line-height: 1.6;
 }
 
+/* Story Button */
 .story-btn {
     padding: 12px 25px;
     font-size: 18px;
@@ -257,26 +337,29 @@ body {
     color: #fff;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 991px) {
-    .story-text {
+/* ✅ Move Title Above Image on Mobile */
+@media (max-width: 768px) {
+    .story-container {
+        display: flex;
+        flex-direction: column-reverse; /* Moves image below title */
         text-align: center;
     }
-    
-    .story-btn {
-        display: block;
-        width: fit-content;
-        margin: 0 auto;
-    }
-}
 
-@media (max-width: 768px) {
+    .story-title-wrapper {
+        order: +1; /* Moves title above image */
+    }
+
     .story-title {
         font-size: 2rem;
+        margin-bottom: 15px;
     }
 
     .story-description {
         font-size: 1.1rem;
+    }
+
+    .story-image {
+        margin-top: 20px;
     }
 }
 
@@ -292,10 +375,11 @@ body {
 
 /* Menu Section */
 .menu {
-    padding: 80px 0;
+    padding: 120px 0 80px 0; /* Increased top padding to prevent navbar overlap */
     background-color: #fff;
 }
 
+/* Menu Heading */
 .menu-heading {
     font-size: 2.8rem;
     font-weight: 700;
@@ -320,6 +404,7 @@ body {
     padding-bottom: 20px;
 }
 
+/* Menu Item Image */
 .menu-item img {
     width: 180px;
     height: 180px;
@@ -327,10 +412,12 @@ body {
     border-radius: 10px;
 }
 
+/* Menu Text */
 .menu-text {
     flex: 1;
 }
 
+/* Menu Item Title */
 .menu-text h3 {
     font-size: 1.8rem;
     font-weight: 700;
@@ -338,17 +425,27 @@ body {
     margin-bottom: 5px;
 }
 
+/* Menu Item Description */
 .menu-text p {
     font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
     color: #666;
     margin-bottom: 5px;
 }
 
+/* Price */
 .price {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #d16b86;
+    color: #5C4033;
     display: block;
+}
+
+/* ✅ Fix Scroll Issue Only for Menu Section */
+.menu-title-section {
+    padding-top: 180px; /* Pushes the title down so it's visible */
+
+    text-align: center;
 }
 
 /* Responsive Design */
@@ -363,6 +460,7 @@ body {
         height: 250px;
     }
 }
+
 /* ========================== */
 /* Modal Styles - Full Responsive */
 /* ========================== */
@@ -410,6 +508,19 @@ body {
     font-weight: bold;
     color: #333;
 }
+
+/* Modal Image - Smaller Size */
+.modal img {
+    width: 60%; /* Reduce width to 60% of modal */
+    height: auto;
+    max-height: 200px; /* Decrease maximum height */
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; /* Center image */
+    display: block;
+}
+
 
 /* Modal Description */
 .modal p {
@@ -529,7 +640,7 @@ body {
     width: 50%;
     padding: 12px;
     font-size: 1.2rem;
-    border: 2px solid #d16b86;
+    border: 2px solid #5C4033;;
     border-radius: 25px;
     outline: none;
     text-align: center;
@@ -537,7 +648,7 @@ body {
 }
 
 #searchBar:focus {
-    border-color: #b34e6f;
+    border-color: #5C4033;
     box-shadow: 0px 0px 10px rgba(209, 107, 134, 0.4);
 }
 
@@ -550,43 +661,34 @@ body {
 }
 
 /* ========================== */
-/* Footer Section Styles */
+/* Compact Footer Styles */
 /* ========================== */
 
 .footer {
     background: #333; /* Dark Elegant Footer */
     color: white;
-    padding: 60px 0;
-}
-
-.footer a {
-    text-decoration: none;
-    color: white;
-    transition: all 0.3s ease-in-out;
-}
-
-.footer a:hover {
-    color: #d16b86;
+    padding: 30px 0; /* Decreased padding */
 }
 
 /* Footer Logo */
 .footer-logo img {
-    width: 150px;
-    margin-bottom: 15px;
+    width: 120px; /* Slightly smaller logo */
+    margin-bottom: 10px;
 }
 
 /* Footer About */
 .footer-about p {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Reduce text size */
     color: #ccc;
+    margin-bottom: 10px;
 }
 
 /* Footer Links */
 .footer-links h4,
 .footer-contact h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Smaller but readable */
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .footer-links ul {
@@ -595,55 +697,55 @@ body {
 }
 
 .footer-links ul li {
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Less space between items */
 }
 
 .footer-links ul li a {
-    font-size: 1.1rem;
+    font-size: 1rem; /* Reduce link text */
     color: #ccc;
 }
 
 /* Footer Contact */
 .footer-contact p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 1rem; /* Reduce text size */
+    margin-bottom: 8px;
     color: #ccc;
 }
 
 .footer-contact i {
-    margin-right: 10px;
+    margin-right: 8px;
     color: #d16b86;
 }
 
 /* Footer Socials */
 .footer-socials {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .footer-socials a {
     display: inline-block;
-    font-size: 1.5rem;
-    margin-right: 15px;
+    font-size: 1.3rem; /* Slightly smaller */
+    margin-right: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
 .footer-socials a:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     color: #d16b86;
 }
 
 /* Footer Bottom */
 .footer-bottom {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px; /* Reduce padding */
     border-top: 1px solid #444;
-    margin-top: 40px;
-    font-size: 1rem;
+    margin-top: 20px; /* Less margin */
+    font-size: 0.9rem; /* Smaller text */
     color: #bbb;
 }
 
 /* ========================== */
-/* Responsive Footer Design */
+/* Responsive Compact Footer Design */
 /* ========================== */
 
 @media (max-width: 991px) {
@@ -654,30 +756,61 @@ body {
     .footer-about,
     .footer-links,
     .footer-contact {
-        margin-bottom: 30px;
+        margin-bottom: 20px; /* Less spacing */
     }
 
     .footer-socials {
         text-align: center;
+        margin-top: 5px;
     }
 }
 
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 0; /* Even smaller padding for mobile */
+    }
+
+    .footer-logo img {
+        width: 100px; /* Smaller logo */
+    }
+
+    .footer-links h4,
+    .footer-contact h4 {
+        font-size: 1.1rem; /* Adjust heading size */
+    }
+
+    .footer-links ul li a {
+        font-size: 0.9rem; /* Reduce font */
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem; /* Smaller footer text */
+    }
+}
 /* ========================== */
-/* Content Page Styles */
+/* Hero Section - Fullscreen Video */
 /* ========================== */
 
-/* Hero Section */
 .content-hero {
     position: relative;
     width: 100%;
-    height: 80vh;
-    background: url('hero-content.jpg') no-repeat center center/cover;
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    padding: 20px;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
 }
 
 .hero-overlay {
@@ -686,49 +819,186 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 80%;
+    text-align: center;
+    padding: 20px;
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
     margin-bottom: 10px;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 400;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* ========================== */
-/* Content Sections */
+/* The Baking Experience - Full Width Section */
 /* ========================== */
-.about-us, .why-choose-us {
-    padding: 80px 0;
+
+.baking-experience {
+    text-align: center;
+    padding: 100px 10%;
+    background: white;
 }
 
-.about-img {
+.section-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #5C4033;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 1.5rem;
+    color: #7B5B3F;
+    margin-bottom: 50px;
+}
+
+.baking-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.baking-item {
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.baking-item:hover {
+    transform: scale(1.05);
+}
+
+.baking-item img {
     width: 100%;
-    border-radius: 10px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.icon {
-    font-size: 3rem;
-    color: #d16b86;
-    margin-bottom: 15px;
+.baking-item h3 {
+    font-size: 1.8rem;
+    color: #5C4033;
+    margin-top: 20px;
+}
+
+.baking-item p {
+    font-size: 1.2rem;
+    color: #7B5B3F;
+}
+
+/* ========================== */
+/* Signature Bakery Creations */
+/* ========================== */
+
+.signature-creations {
+    text-align: center;
+    padding: 100px 10%;
+    background: #ffffff;
+}
+
+.creations-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.creation-card {
+    width: 30%;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.creation-card:hover {
+    transform: translateY(-5px);
+}
+
+.creation-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.creation-card h3 {
+    font-size: 1.8rem;
+    color: #5C4033;
+    margin-top: 15px;
+}
+
+.creation-card p {
+    font-size: 1.2rem;
+    color: #7B5B3F;
+}
+
+/* ========================== */
+/* Testimonials - Premium Feel */
+/* ========================== */
+
+.testimonials {
+    background: white;
+    text-align: center;
+    padding: 100px 10%;
+}
+
+.testimonial-wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    max-width: 350px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #D4A373;
+    transition: all 0.3s ease-in-out;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+}
+
+.testimonial p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #5C4033;
+    line-height: 1.6;
+}
+
+.testimonial h4 {
+    font-size: 1.4rem;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #8C5A36;
 }
 
 /* ========================== */
 /* Responsive Design */
 /* ========================== */
 
-/* Tablets */
 @media (max-width: 991px) {
     .content-hero {
         height: 70vh;
@@ -739,15 +1009,18 @@ body {
     }
 
     .hero-subtitle {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
-    .about-us, .why-choose-us {
-        padding: 60px 0;
+    .baking-gallery, .creations-grid {
+        flex-direction: column;
+    }
+
+    .baking-item, .creation-card {
+        width: 100%;
     }
 }
 
-/* Mobile Devices */
 @media (max-width: 768px) {
     .content-hero {
         height: 60vh;
@@ -755,96 +1028,46 @@ body {
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
     }
 
     .hero-subtitle {
         font-size: 1.2rem;
     }
 
-    .about-us, .why-choose-us {
-        padding: 50px 20px;
-        text-align: center;
+    .baking-experience, .signature-creations, .testimonials {
+        padding: 60px 5%;
     }
 
-    .about-img {
-        max-width: 90%;
-        margin: 0 auto;
-    }
-
-    .icon {
-        font-size: 2.5rem;
+    .baking-item img, .creation-card img {
+        height: 220px;
     }
 }
 
-/* Small Screens */
 @media (max-width: 480px) {
     .content-hero {
         height: 50vh;
-        padding: 15px;
+        padding: 10px;
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
+        margin-bottom: 5px;
     }
 
     .hero-subtitle {
         font-size: 1.1rem;
     }
 
-    .about-us, .why-choose-us {
-        padding: 40px 15px;
+    .baking-experience, .signature-creations, .testimonials {
+        padding: 50px 5%;
     }
 
-    .about-img {
-        max-width: 100%;
-    }
-
-    .icon {
-        font-size: 2.2rem;
+    .baking-item img, .creation-card img {
+        height: 180px;
     }
 }
 
-/* ========================== */
-/* Contact Page Styles */
-/* ========================== */
-.contact-hero {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    background: url('contact-bg.jpg') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 0 20px;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
 
 /* ========================== */
 /* Contact Section */

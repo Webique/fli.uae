@@ -15,34 +15,37 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="logo.png" alt="Cake Shop Logo" class="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="content.html">Our Story</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/logo.png" alt="Cake Shop Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="content.html">Our Story</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Hero Section -->
-    <header class="menu-hero">
-        <div class="menu-overlay"></div>
-        <div class="container text-center menu-content">
-            <h1 class="menu-title">Explore Our Exquisite Menu</h1>
-            <p class="menu-subtitle">Handcrafted with passion, served with love.</p>
-        </div>
-    </header>
+
+<!-- Menu Page Title with New ID -->
+<section id="menu-title-section" class="menu-title-section">
+    <div class="container text-center">
+        <h1 class="menu-title">Our Wonderful Bakery Menu</h1>
+        <p class="menu-subtitle">Indulge in our handcrafted desserts made with love and passion.</p>
+    </div>
+</section>
+
+
+
 
     <!-- Search Bar -->
     <div class="search-container">
@@ -50,53 +53,114 @@
     </div>
 
     <!-- Menu Section -->
-    <section class="menu">
-        <div class="container">
-            <h2 class="menu-heading text-center">Signature Creations</h2>
+<section class="menu">
+    <div class="container">
+        <h2 class="menu-heading text-center">Signature Creations</h2>
 
-            <div class="menu-list" id="menuItems">
-                <div class="menu-item" data-name="chocolate delight" 
-                    onclick="openModal('Chocolate Delight', 'menu-item1.jpg', 'Rich, velvety chocolate perfection, made from the finest cocoa.', '£15.99')">
-                    <img src="menu-item1.jpg" alt="Chocolate Cake">
-                    <div class="menu-text">
-                        <h3>Chocolate Delight</h3>
-                        <p>Rich, velvety chocolate perfection, made from the finest cocoa.</p>
-                        <span class="price">£15.99</span>
-                    </div>
+        <div class="menu-list" id="menuItems">
+            <div class="menu-item" data-name="chocolate delight" 
+                onclick="openModal('Chocolate Delight', '1.png', 'Rich, velvety chocolate perfection, made from the finest cocoa.', '£15.99')">
+                <img src="assets/1.png" alt="Chocolate Cake">
+                <div class="menu-text">
+                    <h3>Chocolate Delight</h3>
+                    <p>Rich, velvety chocolate perfection, made from the finest cocoa.</p>
+                    <span class="price">£15.99</span>
                 </div>
+            </div>
 
-                <div class="menu-item" data-name="strawberry cheesecake"
-                    onclick="openModal('Strawberry Cheesecake', 'menu-item2.jpg', 'Creamy, smooth cheesecake topped with fresh strawberries.', '£18.50')">
-                    <img src="menu-item2.jpg" alt="Strawberry Cheesecake">
-                    <div class="menu-text">
-                        <h3>Strawberry Cheesecake</h3>
-                        <p>Creamy, smooth cheesecake topped with fresh strawberries.</p>
-                        <span class="price">£18.50</span>
-                    </div>
+            <div class="menu-item" data-name="strawberry cheesecake"
+                onclick="openModal('Strawberry Cheesecake', '2.png', 'Creamy, smooth cheesecake topped with fresh strawberries.', '£18.50')">
+                <img src="assets/2.png" alt="Strawberry Cheesecake">
+                <div class="menu-text">
+                    <h3>Strawberry Cheesecake</h3>
+                    <p>Creamy, smooth cheesecake topped with fresh strawberries.</p>
+                    <span class="price">£18.50</span>
                 </div>
+            </div>
 
-                <div class="menu-item" data-name="french macarons"
-                    onclick="openModal('French Macarons', 'menu-item3.jpg', 'A variety of elegant, bite-sized treats.', '£12.99')">
-                    <img src="menu-item3.jpg" alt="Macarons">
-                    <div class="menu-text">
-                        <h3>French Macarons</h3>
-                        <p>A variety of elegant, bite-sized treats.</p>
-                        <span class="price">£12.99</span>
-                    </div>
+            <div class="menu-item" data-name="french macarons"
+                onclick="openModal('French Macarons', '3.png', 'A variety of elegant, bite-sized treats.', '£12.99')">
+                <img src="assets/3.png" alt="Macarons">
+                <div class="menu-text">
+                    <h3>French Macarons</h3>
+                    <p>A variety of elegant, bite-sized treats.</p>
+                    <span class="price">£12.99</span>
                 </div>
+            </div>
 
-                <div class="menu-item" data-name="classic tiramisu"
-                    onclick="openModal('Classic Tiramisu', 'menu-item4.jpg', 'An Italian dessert with layers of coffee-soaked ladyfingers.', '£14.99')">
-                    <img src="menu-item4.jpg" alt="Tiramisu">
-                    <div class="menu-text">
-                        <h3>Classic Tiramisu</h3>
-                        <p>An Italian dessert with layers of coffee-soaked ladyfingers.</p>
-                        <span class="price">£14.99</span>
-                    </div>
+            <div class="menu-item" data-name="classic tiramisu"
+                onclick="openModal('Classic Tiramisu', '4.png', 'An Italian dessert with layers of coffee-soaked ladyfingers.', '£14.99')">
+                <img src="assets/4.png" alt="Tiramisu">
+                <div class="menu-text">
+                    <h3>Classic Tiramisu</h3>
+                    <p>An Italian dessert with layers of coffee-soaked ladyfingers.</p>
+                    <span class="price">£14.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-name="red velvet cake"
+                onclick="openModal('Red Velvet Cake', '5.png', 'A classic cake with a rich, velvety texture and a hint of cocoa.', '£16.50')">
+                <img src="assets/5.png" alt="Red Velvet Cake">
+                <div class="menu-text">
+                    <h3>Red Velvet Cake</h3>
+                    <p>A classic cake with a rich, velvety texture and a hint of cocoa.</p>
+                    <span class="price">£16.50</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-name="lemon meringue pie"
+                onclick="openModal('Lemon Meringue Pie', '6.png', 'A zesty lemon filling topped with fluffy meringue.', '£13.99')">
+                <img src="assets/6.png" alt="Lemon Meringue Pie">
+                <div class="menu-text">
+                    <h3>Lemon Meringue Pie</h3>
+                    <p>A zesty lemon filling topped with fluffy meringue.</p>
+                    <span class="price">£13.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-name="carrot cake"
+                onclick="openModal('Carrot Cake', '7.png', 'A moist, spiced cake with grated carrots and cream cheese frosting.', '£17.50')">
+                <img src="assets/7.png" alt="Carrot Cake">
+                <div class="menu-text">
+                    <h3>Carrot Cake</h3>
+                    <p>A moist, spiced cake with grated carrots and cream cheese frosting.</p>
+                    <span class="price">£17.50</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-name="chocolate chip cookies"
+                onclick="openModal('Chocolate Chip Cookies', '8.png', 'Soft, chewy cookies loaded with chocolate chips.', '£9.99')">
+                <img src="assets/8.png" alt="Chocolate Chip Cookies">
+                <div class="menu-text">
+                    <h3>Chocolate Chip Cookies</h3>
+                    <p>Soft, chewy cookies loaded with chocolate chips.</p>
+                    <span class="price">£9.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-name="vanilla cupcakes"
+                onclick="openModal('Vanilla Cupcakes', '9.png', 'Classic vanilla cupcakes with a swirl of buttercream frosting.', '£10.99')">
+                <img src="assets/9.png" alt="Vanilla Cupcakes">
+                <div class="menu-text">
+                    <h3>Vanilla Cupcakes</h3>
+                    <p>Classic vanilla cupcakes with a swirl of buttercream frosting.</p>
+                    <span class="price">£10.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-name="chocolate lava cake"
+                onclick="openModal('Chocolate Lava Cake', '10.png', 'A decadent chocolate cake with a molten chocolate center.', '£19.99')">
+                <img src="assets/10.png" alt="Chocolate Lava Cake">
+                <div class="menu-text">
+                    <h3>Chocolate Lava Cake</h3>
+                    <p>A decadent chocolate cake with a molten chocolate center.</p>
+                    <span class="price">£19.99</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Item Details Modal -->
     <div id="menuModal" class="modal">
