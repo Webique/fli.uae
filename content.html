@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Story - Luxury Bakery</title>
+    <title>Our Story - Luxury Cake Shop</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Bootstrap CDN -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 <body>
 
@@ -18,7 +20,7 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
     <div class="container">
         <a class="navbar-brand" href="index.html">
-            <img src="assets/logo.png" alt="Luxury Bakery Logo" class="logo">
+            <img src="assets/logo.png" alt="Cake Shop Logo" class="logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,107 +38,100 @@
 </nav>
 
 <!-- Hero Section -->
-<header class="content-hero">
+<header class="hero">
     <video autoplay muted loop playsinline class="hero-video">
-        <source src="assets/header1.mp4" type="video/mp4">
+        <source src="assets/vid2.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1 class="hero-title">The Heart of Our Bakery</h1>
-        <p class="hero-subtitle">A tradition of craftsmanship, passion, and exquisite flavors.</p>
+    <div class="container text-center hero-content">
+        <h1 class="hero-title">A Story of Love & Passion</h1>
+        <p class="hero-subtitle">Baking Memories Since the Very First Day</p>
     </div>
 </header>
 
-<!-- The Art of Baking Section -->
-<section class="baking-experience">
-    <h2 class="section-title">A Baking Experience Like No Other</h2>
-    <p class="section-subtitle">From sunrise to golden loaves, our artistry is woven into every pastry.</p>
+<!-- Our Story Section -->
+<section class="our-story">
+    <div class="container">
+        <div class="story-container">
+            <div class="row align-items-center">
+                <!-- Image -->
+                <div class="col-lg-6">
+                    <div class="story-image">
+                        <img src="assets/ss.png" alt="Our Story Image" class="img-fluid">
+                    </div>
+                </div>
 
-    <div class="baking-gallery">
-        <div class="baking-item">
-            <img src="assets/flour.jpg" alt="Flour Preparation">
-            <h3>Hand-Picked Ingredients</h3>
-            <p>Only the finest organic grains, fresh butter, and natural sweeteners.</p>
-        </div>
-        <div class="baking-item">
-            <img src="assets/dough.jpg" alt="Dough Kneading">
-            <h3>Traditional Techniques</h3>
-            <p>Every dough is hand-kneaded, just like the old masters intended.</p>
-        </div>
-        <div class="baking-item">
-            <img src="assets/bread.jpg" alt="Baked Bread">
-            <h3>Perfectly Baked</h3>
-            <p>Crisp crust, warm center, and that signature bakery aroma.</p>
+                <!-- Text -->
+                <div class="col-lg-6">
+                    <div class="story-text">
+                        <h2 class="story-title">Where It All Began</h2>
+                        <p class="story-description">
+                            What started as a humble family kitchen has blossomed into a luxury bakery, where every cake is made with heart and soul.
+                        </p>
+                        <p class="story-description">
+                            Our journey began with a simple dream: to create desserts that not only taste divine but also tell a story. Using only the finest ingredients, every creation is a masterpiece of flavor and elegance.
+                        </p>
+                        <p class="story-description">
+                            Join us in this journey and let our cakes be part of your sweetest moments.
+                        </p>
+                        <a href="menu.html" class="btn custom-btn story-btn">Explore Our Menu</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Featured Bakery Creations -->
-<section class="signature-creations">
-    <h2 class="section-title">Signature Creations</h2>
-    
-    <div class="creations-grid">
-        <div class="creation-card">
-            <img src="assets/croissant.jpg" alt="Butter Croissant">
-            <h3>Golden Croissants</h3>
-            <p>Flaky, buttery perfection, made fresh every morning.</p>
-        </div>
-        <div class="creation-card">
-            <img src="assets/cinnamon-roll.jpg" alt="Cinnamon Roll">
-            <h3>Cinnamon Rolls</h3>
-            <p>Soft, sweet, and drizzled with the finest vanilla glaze.</p>
-        </div>
-        <div class="creation-card">
-            <img src="assets/sourdough.jpg" alt="Sourdough Bread">
-            <h3>Rustic Sourdough</h3>
-            <p>Slow-fermented, crispy crust, and an unforgettable tang.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials Section -->
-<section class="testimonials">
-    <h2 class="section-title">What Our Customers Say</h2>
-    
-    <div class="testimonial-wrapper">
-        <div class="testimonial">
-            <p>“The sourdough bread is out of this world! Crunchy on the outside, soft on the inside.”</p>
-            <h4>- Emily R.</h4>
-        </div>
-        <div class="testimonial">
-            <p>“From croissants to cinnamon rolls, everything is baked to perfection. Absolutely delicious!”</p>
-            <h4>- James L.</h4>
-        </div>
-        <div class="testimonial">
-            <p>“Best pastries in town! You can taste the high-quality ingredients in every bite.”</p>
-            <h4>- Olivia M.</h4>
+<!-- Animated Feature Section -->
+<section class="story-features">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <i class="fas fa-birthday-cake fa-3x feature-icon"></i>
+                    <h3>Handcrafted Perfection</h3>
+                    <p>Each cake is a work of art, baked to perfection with precision and love.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <i class="fas fa-seedling fa-3x feature-icon"></i>
+                    <h3>Finest Ingredients</h3>
+                    <p>We source only the freshest, high-quality ingredients for a delightful experience.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <i class="fas fa-heart fa-3x feature-icon"></i>
+                    <h3>Made with Love</h3>
+                    <p>Our passion for baking is infused into every slice, making your celebrations extra special.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
- <!-- Footer Section -->
- <footer class="footer">
+<!-- Footer -->
+<footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 footer-about">
+            <div class="col-lg-4 footer-about">
                 <a href="#" class="footer-logo">
                     <img src="assets/logo.png" alt="Cake Shop Logo">
                 </a>
                 <p>Bringing you the finest handcrafted cakes made with passion and perfection.</p>
             </div>
-
-            <div class="col-lg-4 col-md-6 footer-links">
+            <div class="col-lg-4 footer-links">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="content.html#about">Our Story</a></li>
+                    <li><a href="content.html">Our Story</a></li>
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-
-            <div class="col-lg-4 col-md-12 footer-contact">
+            <div class="col-lg-4 footer-contact">
                 <h4>Contact Us</h4>
                 <p><i class="fas fa-map-marker-alt"></i> 123 Cake Street, London, UK</p>
                 <p><i class="fas fa-phone"></i> +44 123 456 789</p>

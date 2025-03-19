@@ -54,6 +54,29 @@ h1, h2, h3 {
 .navbar-nav .nav-link:hover {
     color: #C56E33;
 }
+/* Active Nav Link Style */
+.navbar-nav .nav-link.active {
+    color: #C56E33 !important; /* Set active link color */
+}
+
+/* Active Link Underline */
+.navbar-nav .nav-link.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #C56E33;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+}
+
+/* Ensure hover effect does not override active state */
+.navbar-nav .nav-link:hover {
+    color: #C56E33 !important;
+}
+
 
 /* Order Now Button */
 .btn-primary {
@@ -183,55 +206,47 @@ h1, h2, h3 {
     animation: fadeIn 1.8s ease-in-out forwards;
 }
 
-/* Stylish Hero Button */
+/* ========================== */
+/* Sleek & Properly Short Hero Button */
+/* ========================== */
 .hero-btn {
     display: inline-block;
-    padding: 14px 35px;
-    font-size: 20px;
+    padding: 20px 30px;  /* Reduced padding for a more compact look */
+    font-size: 1.1rem;  /* Slightly smaller text */
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #D4A373, #B68257); /* Beautiful caramel gradient */
-    color: white;
-    border-radius: 50px;
-    margin-top: 60px;
-    border: none;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25); /* Elegant shadow for depth */
-    transition: all 0.4s ease-in-out;
+    background: linear-gradient(135deg, #C56E33, #8B5E3C) !important;
+    background-color: #C56E33 !important; /* Ensures visibility before hover */
+    color: white !important;
+    border-radius: 40px; /* Keeps a soft rounded look */
     text-align: center;
     text-decoration: none;
-    max-width: 220px;
-    letter-spacing: 1px;
-    position: relative;
-    overflow: hidden;
+    border: none !important;
+    transition: all 0.4s ease-in-out;
+    margin-top: 30px; /* Adds space below subtitle */
+    display: inline-block;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.5px; /* Less spacing for a compact look */
+    max-width: 200px !important;  /* Forces a shorter width */
+    
 }
 
-/* Button Hover Animation */
+/* Fix for unwanted stretching inside flex/grid containers */
+.hero-btn-container {
+    display: flex;
+    justify-content: center; /* Ensures proper centering */
+    align-items: center;
+}
+
+/* Hover Effect */
 .hero-btn:hover {
-    background: linear-gradient(135deg, #8C5A36, #704A2E); /* Darker chocolate gradient */
-    transform: scale(1.1); /* Slight pop-out effect */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    background: linear-gradient(135deg, #8B5E3C, #704A2E) !important;
+    background-color: #8B5E3C !important;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Adding a subtle glow effect */
-.hero-btn::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 60%);
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0;
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-}
-
-.hero-btn:hover::before {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-}
-
-/* Add smooth press effect when clicked */
+/* Click Effect */
 .hero-btn:active {
     transform: scale(0.98);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -358,9 +373,7 @@ h1, h2, h3 {
         font-size: 1.1rem;
     }
 
-    .story-image {
-        margin-top: 20px;
-    }
+    
 }
 
 @media (max-width: 480px) {
@@ -714,7 +727,7 @@ h1, h2, h3 {
 
 .footer-contact i {
     margin-right: 8px;
-    color: #d16b86;
+    color: #9c7d6f;
 }
 
 /* Footer Socials */
@@ -731,7 +744,7 @@ h1, h2, h3 {
 
 .footer-socials a:hover {
     transform: scale(1.1);
-    color: #d16b86;
+    color: #8e634f;
 }
 
 /* Footer Bottom */
@@ -787,386 +800,7 @@ h1, h2, h3 {
         font-size: 0.8rem; /* Smaller footer text */
     }
 }
-/* ========================== */
-/* Hero Section - Fullscreen Video */
-/* ========================== */
 
-.content-hero {
-    position: relative;
-    width: 100%;
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    overflow: hidden;
-}
-
-.hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 20px;
-}
-
-.hero-title {
-    font-size: 4rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
-    margin-bottom: 10px;
-}
-
-.hero-subtitle {
-    font-size: 1.7rem;
-    font-weight: 400;
-    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* ========================== */
-/* The Baking Experience - Full Width Section */
-/* ========================== */
-
-.baking-experience {
-    text-align: center;
-    padding: 100px 10%;
-    background: white;
-}
-
-.section-title {
-    font-size: 3.2rem;
-    font-weight: 700;
-    color: #5C4033;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.section-subtitle {
-    font-size: 1.5rem;
-    color: #7B5B3F;
-    margin-bottom: 50px;
-}
-
-.baking-gallery {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.baking-item {
-    flex: 1;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.baking-item:hover {
-    transform: scale(1.05);
-}
-
-.baking-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.baking-item h3 {
-    font-size: 1.8rem;
-    color: #5C4033;
-    margin-top: 20px;
-}
-
-.baking-item p {
-    font-size: 1.2rem;
-    color: #7B5B3F;
-}
-
-/* ========================== */
-/* Signature Bakery Creations */
-/* ========================== */
-
-.signature-creations {
-    text-align: center;
-    padding: 100px 10%;
-    background: #ffffff;
-}
-
-.creations-grid {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.creation-card {
-    width: 30%;
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.creation-card:hover {
-    transform: translateY(-5px);
-}
-
-.creation-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-.creation-card h3 {
-    font-size: 1.8rem;
-    color: #5C4033;
-    margin-top: 15px;
-}
-
-.creation-card p {
-    font-size: 1.2rem;
-    color: #7B5B3F;
-}
-
-/* ========================== */
-/* Testimonials - Premium Feel */
-/* ========================== */
-
-.testimonials {
-    background: white;
-    text-align: center;
-    padding: 100px 10%;
-}
-
-.testimonial-wrapper {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.testimonial {
-    max-width: 350px;
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-    border: 2px solid #D4A373;
-    transition: all 0.3s ease-in-out;
-}
-
-.testimonial:hover {
-    transform: scale(1.05);
-}
-
-.testimonial p {
-    font-size: 1.3rem;
-    font-style: italic;
-    color: #5C4033;
-    line-height: 1.6;
-}
-
-.testimonial h4 {
-    font-size: 1.4rem;
-    margin-top: 15px;
-    font-weight: bold;
-    color: #8C5A36;
-}
-
-/* ========================== */
-/* Responsive Design */
-/* ========================== */
-
-@media (max-width: 991px) {
-    .content-hero {
-        height: 70vh;
-    }
-
-    .hero-title {
-        font-size: 3rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.4rem;
-    }
-
-    .baking-gallery, .creations-grid {
-        flex-direction: column;
-    }
-
-    .baking-item, .creation-card {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .content-hero {
-        height: 60vh;
-        padding: 20px;
-    }
-
-    .hero-title {
-        font-size: 2.6rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .baking-experience, .signature-creations, .testimonials {
-        padding: 60px 5%;
-    }
-
-    .baking-item img, .creation-card img {
-        height: 220px;
-    }
-}
-
-@media (max-width: 480px) {
-    .content-hero {
-        height: 50vh;
-        padding: 10px;
-    }
-
-    .hero-title {
-        font-size: 2.4rem;
-        margin-bottom: 5px;
-    }
-
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-
-    .baking-experience, .signature-creations, .testimonials {
-        padding: 50px 5%;
-    }
-
-    .baking-item img, .creation-card img {
-        height: 180px;
-    }
-}
-
-
-/* ========================== */
-/* Contact Section */
-/* ========================== */
-.contact-section {
-    padding: 80px 0;
-}
-
-.contact-section h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-/* Contact Form */
-.contact-section form {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-section .form-control {
-    font-size: 1.1rem;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-.contact-section .form-control:focus {
-    border-color: #d16b86;
-    box-shadow: 0px 0px 10px rgba(209, 107, 134, 0.3);
-}
-
-/* Contact Button */
-.custom-btn {
-    background-color: #d16b86;
-    color: white;
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    border-radius: 30px;
-    border: none;
-    transition: all 0.3s ease-in-out;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-}
-
-.custom-btn:hover {
-    background-color: #b34e6f;
-}
-
-/* Contact Details */
-.contact-details {
-    background: #f8f9fa;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-details h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
-
-.contact-details p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-}
-
-.contact-details i {
-    color: #d16b86;
-    font-size: 1.5rem;
-    margin-right: 10px;
-}
-
-/* ========================== */
-/* Social Media Icons */
-/* ========================== */
-.contact-socials {
-    margin-top: 20px;
-}
-
-.contact-socials a {
-    font-size: 2rem;
-    margin-right: 15px;
-    color: #d16b86;
-    transition: transform 0.3s ease-in-out;
-}
-
-.contact-socials a:hover {
-    transform: scale(1.2);
-    color: #b34e6f;
-}
 
 /* ========================== */
 /* Thank You Page */
@@ -1276,4 +910,391 @@ h1, h2, h3 {
         font-size: 1.6rem;
         margin-right: 8px;
     }
+}
+
+/* ============== OUR STORY PAGE STYLES ============== */
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: #ffffff;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 300;
+    color: #ffffff;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 1.8s ease-in-out forwards;
+}
+
+/* Our Story Section */
+.our-story {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.story-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.story-image img:hover {
+    transform: scale(1.05);
+}
+
+.story-text {
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+}
+
+.story-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #5C4033;
+    margin-bottom: 20px;
+}
+
+.story-description {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* ========================== */
+/* Elegant & Fully Visible Story Button (Final Fix) */
+/* ========================== */
+.story-btn {
+    padding: 14px 30px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #C56E33, #8B5E3C) !important;
+    background-color: #C56E33 !important; /* Fix: Ensure it’s always visible */
+    color: white !important;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    border: none !important;
+    transition: all 0.4s ease-in-out;
+    display: inline-block;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fix for transparency issues */
+.story-btn:before,
+.story-btn:after {
+    display: none !important;
+}
+
+/* Hover Effect */
+.story-btn:hover {
+    background: linear-gradient(135deg, #8B5E3C, #704A2E) !important;
+    background-color: #8B5E3C !important;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Fix Button Not Showing */
+.story-btn:focus,
+.story-btn:active {
+    background: linear-gradient(135deg, #8B5E3C, #704A2E) !important;
+    background-color: #8B5E3C !important;
+    color: white !important;
+}
+
+
+/* Features Section */
+.story-features {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.feature-box {
+    padding: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-icon {
+    color: #C56E33;
+    margin-bottom: 15px;
+}
+
+.feature-box h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #5C4033;
+}
+
+.feature-box p {
+    font-size: 1.1rem;
+    color: #5C4033;
+    margin-top: 10px;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+}
+
+/* ============== RESPONSIVE DESIGN ============== */
+@media (max-width: 991px) {
+    .story-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .story-title {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .story-description {
+        font-size: 1.1rem;
+    }
+
+    .story-image {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .story-title {
+        font-size: 2rem;
+    }
+
+    .story-description {
+        font-size: 1rem;
+    }
+}
+
+/* ============== ANIMATIONS ============== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================== */
+/* Contact Section - Fixed Design with Top Margin */
+/* ========================== */
+.contact-section {
+    padding: 100px 0; /* Added extra padding */
+    margin-top: 50px; /* Ensures space below navbar */
+    text-align: center;
+    background-color: white; /* Clean, modern white background */
+    color: #5C4033;
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Dancing Script', cursive;
+    color: #8B5E3C; /* Rich caramel */
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #5C4033;
+    margin-bottom: 30px;
+}
+
+/* Contact Form */
+.contact-section form {
+    background: #ffffff; /* Light bakery tone */
+    padding: 30px;
+    border-radius: 12px;
+    
+    
+}
+
+.contact-section .form-control {
+    font-size: 1.1rem;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #C56E33;
+    
+}
+
+/* ========================== */
+/* Elegant & Fully Visible Custom Button */
+/* ========================== */
+.custom-btn {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #C56E33, #8B5E3C) !important;
+    background-color: #C56E33 !important; /* Ensures visibility before hover */
+    color: white !important;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    border: none !important;
+    transition: all 0.4s ease-in-out;
+    display: inline-block;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    min-width: 150px; /* Prevents button from becoming too wide */
+}
+
+/* Hover Effect */
+.custom-btn:hover {
+    background: linear-gradient(135deg, #8B5E3C, #704A2E) !important;
+    background-color: #8B5E3C !important;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Glow Effect on Hover */
+.custom-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.custom-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Click Effect */
+.custom-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Contact Details */
+.contact-details {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.contact-details p {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-details i {
+    margin-right: 10px;
+    color: #8B5E3C;
+}
+
+/* Social Icons */
+.contact-socials a {
+    font-size: 2rem;
+    margin-right: 15px;
+    color: #8B5E3C;
+}
+
+.contact-socials a:hover {
+    transform: scale(1.2);
+    color: #8B5E3C;
+}
+
+/* Fix Scrolling */
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
