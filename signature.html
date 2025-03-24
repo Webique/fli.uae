@@ -10,46 +10,56 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <div class="logo">
-            <img src="assets/logo.png" alt="Fli Bakery Logo">
-        </div>
-        <div class="menu-toggle" id="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <nav id="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="https://app.qlub.io/qr/ae/fili-bakery-sharjah/1/_/_/18b3b354cc?lang=en" target="_blank">Menu</a></li>
-                <li><a href="signature.html">Signature Dish</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="index.html#supply">Supply</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navigation Bar -->
+  <header class="main-header">
+    <div class="logo">
+        <img src="assets/logo.png" alt="Fli Bakery Logo">
+    </div>
 
-    <!-- Signature Dish Section -->
-    <section class="signature-section">
-        <div class="signature-content">
-            <h1 class="signature-title">The Iconic Strawberry Cheesecake</h1>
-            <p class="signature-description">Our signature **Strawberry Cheesecake** is a masterpiece of flavors and textures, carefully crafted with passion and precision.</p>
-            <ul class="signature-list">
-                <li><strong>Rich & Creamy:</strong> A velvety smooth cheesecake that melts in your mouth.</li>
-                <li><strong>Perfectly Balanced:</strong> The sweetness of fresh strawberries meets the slight tanginess of our signature cream cheese blend.</li>
-                <li><strong>Buttery Graham Cracker Crust:</strong> A crisp, golden crust that complements the luscious filling.</li>
-                <li><strong>Fresh Strawberry Topping:</strong> Made with handpicked, ripe strawberries and a homemade glaze.</li>
-                <li><strong>No Artificial Additives:</strong> 100% natural ingredients for an authentic taste.</li>
-            </ul>
-            <p class="signature-description">Perfect for birthdays, anniversaries, or just a sweet indulgence. Treat yourself to a slice of **pure bliss.**</p>
-            <a href="https://app.qlub.io/qr/ae/fili-bakery-sharjah/1/_/_/18b3b354cc?lang=en" class="signature-button" target="_blank">Order Now</a>
-        </div>
-        <div class="signature-image">
-            <img src="assets/signature.png" alt="Strawberry Cheesecake">
-        </div>
-    </section>
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://app.qlub.io/qr/ae/fili-bakery-sharjah/1/_/_/18b3b354cc?lang=en" target="_blank">Menu</a></li>
+            <li><a href="signature.html">Signature Dish</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#supply">Supply</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="signature-hero">
+    <video autoplay muted loop class="signature-bg-video">
+      <source src="assets/signature-bg.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  
+    <div class="signature-hero-content">
+      <h1 class="signature-title">Strawberry Cheesecake</h1>
+      <p class="signature-subtitle">So good, it should be illegal 🍓</p>
+      <p class="signature-description">
+        Indulge in our handcrafted Strawberry Cheesecake — rich, creamy, and topped with ripe strawberries and a glossy homemade glaze.
+      </p>
+      <ul class="signature-features">
+        <li><i class="fas fa-check-circle"></i> Handmade fresh daily</li>
+        <li><i class="fas fa-check-circle"></i> 100% natural ingredients</li>
+        <li><i class="fas fa-check-circle"></i> Delivered across the UAE</li>
+      </ul>
+      <a href="https://app.qlub.io/qr/ae/fili-bakery-sharjah/1/_/_/18b3b354cc?lang=en" class="signature-button" target="_blank">
+        Order Now
+      </a>
+    </div>
+</section>
+  
+  
+  
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -91,6 +101,5 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
