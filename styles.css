@@ -1323,14 +1323,19 @@ header {
     }
 }
 
+.divider-wrapper {
+    background-color: var(--background-color); /* Light theme background */
+    padding: 40px 0; /* Adds breathing room above/below */
+}
+
 .section-divider {
     width: 80%;
     height: 6px;
-    margin: 3rem auto;
-    background-color: var(--primary-color); /* Soft mint green */
+    margin: 0 auto;
+    background-color: var(--primary-color); /* Mint green */
     border-radius: 10px;
     opacity: 0.95;
-    box-shadow: 0 4px 12px rgba(61, 64, 83, 0.25); /* Soft shadow using secondary color */
+    box-shadow: 0 4px 12px rgba(61, 64, 83, 0.25);
 }
 
 .thankyou-section {
