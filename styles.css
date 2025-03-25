@@ -16,7 +16,7 @@
 
 /* Body Styling */
 body {
-    background-color: var(--background-color);
+    background-color: var(--primary-color);
     color: var(--secondary-color);
 }
 
