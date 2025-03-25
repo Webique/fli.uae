@@ -156,6 +156,8 @@ header {
     height: 100%;
     object-fit: cover;
     filter: blur(5px) brightness(60%); /* Blur effect with dimming */
+    pointer-events: none; /* ✅ Prevents weird behavior on touch devices */
+    transform: none !important; /* ✅ Ensure no unexpected scaling/zooming */
 }
 
 /* Overlay Content */
@@ -267,6 +269,8 @@ header {
 /* Content Section */
 .cheesecake-content {
     max-width: 50%;
+    pointer-events: none; /* ✅ Prevents weird behavior on touch devices */
+    transform: none !important; /* ✅ Ensure no unexpected scaling/zooming */
 }
 
 .cheesecake-title {
