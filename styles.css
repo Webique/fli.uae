@@ -227,11 +227,19 @@ header {
         font-size: 18px;
     }
 }
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 90vh;
+        overflow: hidden;
+    }
+}
+
 
 @media screen and (max-width: 480px) {
     .hero {
         height: 80vh;
         padding: 0 10%;
+        overflow: hidden; 
     }
 
     .hero-title {
@@ -325,6 +333,7 @@ header {
 
     .cheesecake-content {
         max-width: 100%;
+        overflow: hidden;
     }
 
     .cheesecake-title {
@@ -367,6 +376,10 @@ header {
         max-width: 340px;
         margin-top: 50px;
     }
+    .cheesecake-content {
+        max-width: 100%;
+        overflow: hidden;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -387,6 +400,10 @@ header {
         width: 85%;
         max-width: 300px;
         margin-top: 60px;
+    }
+    .cheesecake-content {
+        max-width: 100%;
+        overflow: hidden;
     }
 }
 
